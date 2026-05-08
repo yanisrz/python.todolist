@@ -9,7 +9,8 @@ def todolist():
         print(" 4. Supprimer toutes les taches")
         print(" 5. Quitter")
         #print(" 5. Enregistrer les taches dans un fichier texte")
-        
+        print("")
+
         choix = input(" Choisissez une option:  ").strip()
         print("")
 
