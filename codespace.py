@@ -17,8 +17,10 @@ def todolist():
             if taches:
                 print("Les taches dans la liste sont:")
                 
-                for i, tache in enumerate(taches, start=1):
-                    print(f"{i}. {tache}")
+                i=1
+                for tache in taches:
+                    print(f"{i}.{tache}")
+                    i+=1
                     
         
             else:
