@@ -72,13 +72,4 @@ def todolist():
             print(" Option introuvable.")
             print(" Veuillez choisir une option valide.")
 
-
-                
-
-
-            
-            
-
-            
-
 todolist()
