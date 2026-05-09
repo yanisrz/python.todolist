@@ -14,19 +14,22 @@ def todolist():
         choix = input(" Choisissez une option:  ").strip()
         print("")
 
-        if choix == "1":   
+        if choix == "1":
+            
+            print("____________________________________________\n")   
             if taches:
                 print("Les taches dans la liste sont:")
                 
                 i=1
                 for tache in taches:
-                    print(f"{i}.{tache}")
+                    print(f"\t{i}. {tache}")
                     i+=1
                     
         
             else:
                 print(" Il n'y a pas encore de tache dans la liste.")
                 
+            print("____________________________________________\n")   
 
 
         elif choix == "2":
@@ -34,6 +37,14 @@ def todolist():
             print("")
             taches.append(nouvelle_tache)
             print(f"La tache \"{nouvelle_tache}\" a bien ete ajouter a la liste.")
+            print("____________________________________________\n")   
+            print("Les taches dans la liste sont:")
+            
+            i=1
+            for tache in taches:
+                print(f"\t{i}. {tache}")
+                i+=1
+            print("____________________________________________\n")   
 
         elif choix == "3":
             if taches:
