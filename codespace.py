@@ -1,6 +1,7 @@
 def todolist():
+    # Créer une liste pour stocker les tâches
     taches = []
-
+    #entre dans une boucle infinie
     while True:
         print("\n Option de la To do list:")
         print(" 1. Afficher les taches")
@@ -10,14 +11,14 @@ def todolist():
         print(" 5. Quitter")
         #print(" 5. Enregistrer les taches dans un fichier texte")
         print("")
-
+        # Demander à l'utilisateur de choisir une option et enleve les espaces inutiles
         choix = input(" Choisissez une option:  ").strip()
         print("")
 
         if choix == "1":   
             if taches:
                 print("Les taches dans la liste sont:")
-                
+                #affiche toute les taches de la liste avec un numero devant chaque tache ( possibilité d'utiliser enumerate(for i, tache in enumerate(taches, start=1))
                 i=1
                 for tache in taches:
                     print(f"{i}.{tache}")
@@ -32,6 +33,7 @@ def todolist():
         elif choix == "2":
             nouvelle_tache = input("Entrez la tache a ajouter:  ").strip()
             print("")
+            #ajoutes un nouvelle tache ans la liste puis reviens au haut de la boucle
             taches.append(nouvelle_tache)
             print(f"La tache \"{nouvelle_tache}\" a bien ete ajouter a la liste.")
 
@@ -73,3 +75,4 @@ def todolist():
             print(" Veuillez choisir une option valide.")
 
 todolist()
+ 
