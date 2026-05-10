@@ -17,20 +17,22 @@ def todolist():
 
         if choix == "1":
             
-            print("____________________________________________\n")   
+               
             if taches:
                 print("Les taches dans la liste sont:")
+                print("____________________________________________\n")
                 #affiche toute les taches de la liste avec un numero devant chaque tache ( possibilité d'utiliser enumerate(for i, tache in enumerate(taches, start=1))
                 i=1
                 for tache in taches:
-                    print(f"\t{i}. {tache}")
+                    print(f"{i}. {tache}")
                     i+=1
-                    
+                print("____________________________________________\n")
         
             else:
+                print("____________________________________________\n")
                 print(" Il n'y a pas encore de tache dans la liste.")
-                
-            print("____________________________________________\n")   
+                print("____________________________________________\n")
+               
 
 
         elif choix == "2":
@@ -38,42 +40,54 @@ def todolist():
             print("")
             #ajoutes un nouvelle tache ans la liste puis reviens au haut de la boucle
             taches.append(nouvelle_tache)
+            print("_____________________________________________________________\n")
+            print("")
             print(f"La tache \"{nouvelle_tache}\" a bien ete ajouter a la liste.")
-            print("____________________________________________\n")   
+            print("_____________________________________________________________\n")
+            print("")
             print("Les taches dans la liste sont:")
+            print("____________________________________________\n")
             
             i=1
             for tache in taches:
-                print(f"\t{i}. {tache}")
+                print(f"{i}. {tache}")
                 i+=1
             print("____________________________________________\n")   
 
         elif choix == "3":
             if taches:
                 print("Les taches de la listes sont:")
+                print("____________________________________________\n")   
+
                 i=1
                 for tache in taches:
                     print(f"{i}.{tache}")
                     i+=1
+                print("____________________________________________\n")   
+
                 tache_suprimee = input("Entrez le numero de la taches a suprimez:  ").strip()
                 
                 print("")
                 if tache_suprimee.isdigit() == False:
-                    print("Veuillez entrer un numero valide.")
+                    print("Veuillez entrer un numéro valide.")
                 else:
                     tache_suprimee = int(tache_suprimee)
                     nombre_taches = len(taches)
                     if 0 < (tache_suprimee) <= nombre_taches:
                         tache_suprimee = taches.pop((tache_suprimee) - 1)
-                        print(f"La taches \"{tache_suprimee}\" a bien ete suprimez de la liste.")
+                        print("\n\n_____________________________________________________________\n")
+                        print(f"La taches \"{tache_suprimee}\" à bien été suprimée de la liste.")
+                        print("_____________________________________________________________\n")
                     elif tache_suprimee > nombre_taches:
-                        print("Veuillez entrer un numero valide.")
+                        print("Veuillez entrer un numéro valide.")
             else:
-                print("Il n'y a pas de tache a suprimez dans la liste.")
+                print("Il n'y a pas de tache a suprimer dans la liste.")
 
         elif choix == "4":
                 if taches:
-                    print("Toutes les taches ont ete suprimez de la liste.")
+                    print("_____________________________________________________________\n")
+                    print("Toutes les taches ont été suprimées de la liste.")
+                    print("_____________________________________________________________\n")
                 taches.clear()
         
 
@@ -82,8 +96,10 @@ def todolist():
                     print(" Aurevoir!")
                     break
         else: 
-            print(" Option introuvable.")
-            print(" Veuillez choisir une option valide.")
+            print(" -------------------------------------")
+            print(" |Option introuvable.                |")
+            print(" |Veuillez choisir une option valide.|")
+            print(" -------------------------------------")
 
 todolist()
  
