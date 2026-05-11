@@ -23,6 +23,7 @@ def todolist():
                 print("____________________________________________\n")
                 #affiche toute les taches de la liste avec un numero devant chaque tache ( possibilité d'utiliser enumerate(for i, tache in enumerate(taches, start=1))
                 i=1
+                # A chaue tours la variable temporaire "tache" prends la valeur de chaques elements de la liste "taches" et joue le code de la boucle
                 for tache in taches:
                     print(f"{i}. {tache}")
                     i+=1
